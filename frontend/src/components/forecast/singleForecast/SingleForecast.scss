@@ -1,0 +1,22 @@
+.current-day {
+  width: 50%;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: 1fr 2fr 1fr;
+
+  h1 {
+    text-align: center;
+  }
+  span {
+    font-family: "weathericons";
+    font-size: 5.5em;
+  }
+  img {
+    width: 300px;
+    color: #fff;
+    background-color: #fff;
+  }
+  i {
+    margin-right: 5px;
+  }
+}

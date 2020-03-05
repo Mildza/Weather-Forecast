@@ -1,0 +1,13 @@
+
+# dependencies
+/node_modules
+
+
+# production
+/build
+
+/.vscode
+/package-lock.json
+/README.md
+/frontend/node_modules
+/backend/node_modules

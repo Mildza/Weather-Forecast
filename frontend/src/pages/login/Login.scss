@@ -1,0 +1,49 @@
+@mixin shrink {
+  top: 0px;
+  font-size: 14px;
+  color: grey;
+}
+
+.login {
+  width: 200px;
+  margin: 0 auto;
+  margin-top: 70px;
+  position: relative;
+  &:focus ~ .label {
+    @include shrink();
+  }
+  input {
+    width: 200px;
+    padding: 5px;
+    font-family: inherit;
+    font-size: 1.1em;
+    border: none;
+    border-bottom: 1px solid black;
+
+    &:focus ~ .label {
+      @include shrink();
+    }
+  }
+
+  .label {
+    text-align: left;
+    font-size: 0.9em;
+    color: #ccc;
+    position: relative;
+    top: 30px;
+    &.shrink {
+      @include shrink();
+    }
+  }
+
+  .button {
+    text-align: center;
+    margin-top: 20px;
+  }
+
+  .errors {
+    color: red;
+    margin: 0px;
+    font-size: 0.9em;
+  }
+}
