@@ -59,5 +59,12 @@
 @media (max-width: 768px) {
   .main-forecast {
     width: 90%;
+    font-size: 0.8em;
+
+    .image-condition {
+      span {
+        font-size: 6.5em;
+      }
+    }
   }
 }

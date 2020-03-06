@@ -14,7 +14,6 @@ const Login = () => {
   const { handleChange, values, errors, formValid } = useForm(validate);
   const { logHandler } = useContext(UserContext);
   const { setError } = useContext(ErrorContext);
-  console.log(errors);
 
   function submit(e) {
     e.preventDefault();
@@ -36,7 +35,7 @@ const Login = () => {
   return (
     <div className="login">
       <form onSubmit={submit}>
-        <div className={`label ${errors.dirty && "shrink"}`}>
+        <div className="label">
           <label htmlFor="username">Username</label>
         </div>
         <div>
@@ -54,7 +53,7 @@ const Login = () => {
           ) : null}
         </div>
         <br />
-        <div className={`label ${errors.dirty && "shrink"}`}>
+        <div className="label">
           <label htmlFor="password">Password</label>
         </div>
         <div>

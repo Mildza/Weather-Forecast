@@ -30,3 +30,14 @@
     }
   }
 }
+
+@media (max-width: 768px) {
+  .single-forecast {
+    font-size: 0.8em;
+    .image-condition {
+      span {
+        font-size: 3.5em;
+      }
+    }
+  }
+}

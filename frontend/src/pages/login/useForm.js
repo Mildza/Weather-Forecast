@@ -8,7 +8,7 @@ const useForm = validate => {
     touched: false
   });
   const [formValid, setFormValid] = useState(false);
-  //   validate(values, errors);
+  validate(values, errors);
 
   const handleChange = event => {
     const { name, value } = event.target;
