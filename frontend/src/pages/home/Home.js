@@ -10,7 +10,7 @@ const Home = () => {
   const [weather, setWeather] = useState();
 
   async function getForecast() {
-    await axios.get("http://localhost:3001/yahoo").then(response => {
+    await axios.get("/yahoo").then(response => {
       setWeather(response.data);
     });
   }
