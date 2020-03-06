@@ -12,7 +12,7 @@ const SingleForecast = ({ data }) => {
         <span>
           <i className={`wi wi-yahoo-${data.code}`}></i>
         </span>
-        <h2>{data.text}</h2>
+        <h3>{data.text}</h3>
       </div>
       <div className="temperature">
         <h3>
