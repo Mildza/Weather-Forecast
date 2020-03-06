@@ -1,0 +1,63 @@
+.main-forecast {
+  width: 50%;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: 2fr 2fr 2fr;
+
+  .city {
+    grid-column: 1/-1;
+    grid-row: 1;
+    h1 {
+      margin-bottom: 10px;
+    }
+  }
+
+  .temp-humidity {
+    grid-row: 2;
+    width: 80px;
+    justify-self: right;
+    align-self: center;
+  }
+  .image-condition {
+    grid-row: 2;
+    text-align: center;
+    span {
+      font-size: 8.5em;
+    }
+    h2 {
+      margin-top: 0;
+    }
+  }
+  .sun {
+    grid-row: 2;
+    align-self: center;
+  }
+
+  .wind-pressure {
+    grid-column: 1/-1;
+    grid-row: 3;
+    display: flex;
+    justify-content: center;
+    h2 {
+      margin-right: 30px;
+      margin-top: 0px;
+    }
+  }
+
+  h1 {
+    text-align: center;
+  }
+  img {
+    width: 300px;
+    color: #fff;
+    background-color: #fff;
+  }
+  i {
+    margin-right: 5px;
+  }
+}
+@media (max-width: 768px) {
+  .main-forecast {
+    width: 90%;
+  }
+}

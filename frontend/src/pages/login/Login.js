@@ -45,6 +45,7 @@ const Login = () => {
             name="username"
             id="username"
             autoComplete="off"
+            placeholder="username"
             onChange={handleChange}
             value={values.username}
           />
@@ -62,6 +63,7 @@ const Login = () => {
             name="password"
             id="password"
             autoComplete="off"
+            placeholder="password"
             onChange={handleChange}
             value={values.password}
           />

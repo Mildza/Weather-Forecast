@@ -1,14 +1,17 @@
 import React from "react";
 
 import "./MultiForecast.scss";
+import SingleForecast from "../singleForecast/SingleForecast";
 
 const MultiForecast = ({ data }) => {
   const { forecasts } = data;
-  console.log(forecasts);
+  forecasts.shift();
 
   return (
-    <div className="default">
-      <h1>Multi</h1>
+    <div className="multi-forecast">
+      {forecasts.map(el => (
+        <SingleForecast key={el.date} data={el} />
+      ))}
     </div>
   );
 };

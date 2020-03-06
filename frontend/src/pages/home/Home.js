@@ -3,7 +3,7 @@ import React, { useState, useEffect } from "react";
 import axios from "axios";
 
 import "./Home.scss";
-import SingleForecast from "./../../components/forecast/singleForecast/SingleForecast";
+import MainForecast from "./../../components/forecast/mainForecast/MainForecast";
 import MultiForecast from "../../components/forecast/multiForecast/MultiForecast";
 
 const Home = () => {
@@ -12,7 +12,6 @@ const Home = () => {
   async function getForecast() {
     await axios.get("http://localhost:3001/yahoo").then(response => {
       setWeather(response.data);
-      console.log(response);
     });
   }
 
@@ -24,7 +23,7 @@ const Home = () => {
     <div className="default">
       {weather && (
         <div>
-          <SingleForecast data={weather} />
+          <MainForecast data={weather} />
           <MultiForecast data={weather} />
         </div>
       )}

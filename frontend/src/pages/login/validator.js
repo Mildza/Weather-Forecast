@@ -11,10 +11,6 @@ export default function validate(values, errors) {
   } else {
     errors.username = "";
   }
-  if (!values.email) {
-  } else if (!/\S+@\S+\.\S+/.test(values.email)) {
-    errors.email = "Email address is invalid";
-  }
   if (values.password.trim().length === 0) {
     errors.password = "Password is required";
   } else if (values.password.length < 6) {

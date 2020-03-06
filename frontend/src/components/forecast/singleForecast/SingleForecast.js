@@ -3,44 +3,27 @@ import React from "react";
 import "./SingleForecast.scss";
 
 const SingleForecast = ({ data }) => {
-  const { location, current_observation: observation } = data;
-
   return (
-    <div className="current-day">
-      <h2>
-        <i className="wi wi-strong-wind"></i>
-        {`${observation.wind.speed}km/h`}
-      </h2>
-      <h1>{`${location.city}, ${location.country}`}</h1>
-      <h2>
-        <i className="wi wi-barometer"></i>
-        {`${observation.atmosphere.pressure}h/Pa`}
-      </h2>
-      <h2>
-        <i className="wi wi-humidity"></i>
-        {observation.atmosphere.humidity}
-      </h2>
-      <div>
-        <h2>{observation.condition.text}</h2>
+    <div className="single-forecast">
+      <div className="day">
+        <h2>{data.day}</h2>
+      </div>
+      <div className="image-condition">
         <span>
-          <i className={`wi wi-yahoo-${observation.condition.code}`}></i>
+          <i className={`wi wi-yahoo-${data.code}`}></i>
         </span>
+        <h3>{data.text}</h3>
       </div>
-      <div>
-        <h2>
-          <i className="wi wi-sunrise"></i>
-          {observation.astronomy.sunrise}
-        </h2>
-        <h2>
-          <i className="wi wi-sunset"></i>
-          {observation.astronomy.sunset}
-        </h2>
+      <div className="temperature">
+        <h3>
+          <i className="wi wi-thermometer-exterior"></i>
+          {data.low}
+        </h3>
+        <h3>
+          <i className="wi wi-thermometer"></i>
+          {data.high}
+        </h3>
       </div>
-      <h2>
-        <i className="wi wi-thermometer"></i>
-        {observation.condition.temperature}&#8451;
-      </h2>
-      <h2>{observation.condition.code}</h2>
     </div>
   );
 };

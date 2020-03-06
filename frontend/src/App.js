@@ -26,7 +26,7 @@ function App() {
       <UserContext.Provider value={{ user, logHandler }}>
         <ErrorContext.Provider value={{ message, setError }}>
           <ErrorMesags />
-          {user ? <Login /> : <Home />}
+          {!user ? <Login /> : <Home />}
         </ErrorContext.Provider>
       </UserContext.Provider>
     </div>

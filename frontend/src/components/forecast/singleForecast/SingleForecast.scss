@@ -1,22 +1,32 @@
-.current-day {
-  width: 50%;
+.single-forecast {
+  width: 100%;
   margin: 0 auto;
-  display: grid;
-  grid-template-columns: 1fr 2fr 1fr;
+  margin-top: 30px;
 
-  h1 {
+  .day {
     text-align: center;
+    h2 {
+      margin-top: 0px;
+      margin-bottom: 5px;
+    }
   }
-  span {
-    font-family: "weathericons";
-    font-size: 5.5em;
+
+  .image-condition {
+    text-align: center;
+    margin: 0 auto;
+    span {
+      font-size: 4.5em;
+    }
+    h3 {
+      margin-top: 10px;
+    }
   }
-  img {
-    width: 300px;
-    color: #fff;
-    background-color: #fff;
-  }
-  i {
-    margin-right: 5px;
+  .temperature {
+    display: flex;
+    justify-content: center;
+    h3 {
+      margin-top: 0;
+      margin-right: 20px;
+    }
   }
 }

@@ -19,7 +19,7 @@ const request = new OAuth.OAuth(
 
 router.get("/", function(req, res, next) {
   request.get(
-    "https://weather-ydn-yql.media.yahoo.com/forecastrss?location=sunnyvale&u=c,ca&format=json",
+    "https://weather-ydn-yql.media.yahoo.com/forecastrss?location=nis,rs&u=c&format=json",
     null,
     null,
     function(err, data, result) {

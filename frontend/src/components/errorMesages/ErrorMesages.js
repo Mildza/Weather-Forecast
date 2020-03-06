@@ -11,7 +11,11 @@ const ErrorMesages = () => {
     setTimeout(() => setError(""), 3000);
   }
 
-  return !message ? null : <div className="error-message">{message}</div>;
+  return !message ? null : (
+    <div className="error-message">
+      <div className="content">{message}</div>
+    </div>
+  );
 };
 
 export default ErrorMesages;
