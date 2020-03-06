@@ -9,7 +9,7 @@
     "server": "nodemon index.js",
     "client": "npm start --prefix Frontend",
     "dev": "concurrently \" npm run server\" \"npm run client\" ",
-    "heroku-postbuild": "npm install --prefix frontend && npm run build --prefix Frontend"
+    "heroku-postbuild": "npm install --prefix frontend && npm run build --prefix frontend"
   },
   "author": "",
   "license": "ISC",
