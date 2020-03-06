@@ -2,6 +2,12 @@
   width: 100%;
   margin: 0 auto;
   margin-top: 30px;
+  display: flex;
+  flex-direction: column;
+
+  i {
+    padding-right: 3px;
+  }
 
   .day {
     text-align: center;
