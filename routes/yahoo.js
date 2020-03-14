@@ -18,8 +18,6 @@ const request = new OAuth.OAuth(
 );
 
 router.get("/:city", function(req, res, next) {
-  console.log(req.params.city);
-
   const city = req.params.city || "nis,serbia";
   request.get(
     `https://weather-ydn-yql.media.yahoo.com/forecastrss?location=${city}&u=c&format=json`,
