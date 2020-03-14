@@ -11,7 +11,7 @@ const Home = () => {
   const [city, setCity] = useState("nis,serbia");
 
   async function getForecast() {
-    await axios.get(`http://localhost:3001/yahoo/${city}`).then(response => {
+    await axios.get(`/yahoo/${city}`).then(response => {
       setWeather(response.data);
     });
   }
