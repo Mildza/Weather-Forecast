@@ -57,21 +57,25 @@ const MainForecast = ({ submit, data }) => {
           </h2>
         </div>
         <div className="wind-pressure">
-          <h2>
+          <h2 className="rest">
             <i className="wi wi-barometer"></i>
             {`${observation.atmosphere.pressure}h/Pa`}
           </h2>
           <div className="low-high">
             <h2>
-              <i className="wi wi-thermometer-exterior"></i>
-              {low}
+              <span>
+                <i className="wi wi-thermometer-exterior"></i>
+                {low}
+              </span>
             </h2>
             <h2>
-              <i className="wi wi-thermometer"></i>
-              {high}
+              <span>
+                <i className="wi wi-thermometer"></i>
+                {high}
+              </span>
             </h2>
           </div>
-          <h2>
+          <h2 className="rest wind">
             <i className="wi wi-strong-wind"></i>
             {`${observation.wind.speed}km/h`}
           </h2>

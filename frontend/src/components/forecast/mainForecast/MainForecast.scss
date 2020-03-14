@@ -1,20 +1,23 @@
 .main-container {
   text-align: center;
-  input {
-    width: 150px;
-    padding: 5px;
-    font-family: inherit;
-    font-size: 1.1em;
-    border: none;
-    border-bottom: 1px solid black;
-    outline: none;
-  }
+  form {
+    margin-top: 10px;
+    input {
+      width: 150px;
+      padding: 5px;
+      font-family: inherit;
+      font-size: 1.1em;
+      border: none;
+      border-bottom: 1px solid black;
+      outline: none;
+    }
 
-  .label {
-    text-align: left;
-    font-size: 0.9em;
-    color: #ccc;
-    position: relative;
+    .label {
+      text-align: left;
+      font-size: 0.9em;
+      color: #ccc;
+      position: relative;
+    }
   }
 }
 
@@ -57,14 +60,15 @@
   .wind-pressure {
     grid-column: 1/-1;
     grid-row: 3;
-    display: flex;
     justify-content: center;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
     h2 {
       margin-top: 0px;
     }
     .low-high {
       display: flex;
-      margin: 0 30px;
+      justify-content: center;
       h2 {
         padding: 0 10px;
       }
@@ -91,6 +95,28 @@
     .image-condition {
       span {
         font-size: 6.5em;
+      }
+    }
+    .wind-pressure {
+      .low-high {
+        grid-row: 1;
+        grid-column-start: 2;
+        grid-column-end: 3;
+
+        h2 {
+          padding: 0 5px;
+        }
+        i {
+          margin-right: 2px;
+        }
+      }
+      .rest {
+        grid-row: 2;
+        text-align: right;
+      }
+      .wind {
+        grid-column-start: 3;
+        text-align: left;
       }
     }
   }
