@@ -8,22 +8,32 @@ import MultiForecast from "../../components/forecast/multiForecast/MultiForecast
 
 const Home = () => {
   const [weather, setWeather] = useState();
+  const [city, setCity] = useState("nis,serbia");
 
   async function getForecast() {
-    await axios.get("/yahoo").then(response => {
+    await axios.get(`/yahoo/${city}`).then(response => {
       setWeather(response.data);
     });
   }
 
   useEffect(() => {
     getForecast();
-  }, []);
+  }, [city]);
+
+  const getCity = city => {
+    setCity(city);
+  };
 
   return (
     <div className="default">
       {weather && (
         <div>
-          <MainForecast data={weather} />
+          <MainForecast
+            data={weather}
+            submit={i => {
+              getCity(i);
+            }}
+          />
           <MultiForecast data={weather} />
         </div>
       )}

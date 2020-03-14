@@ -17,9 +17,12 @@ const request = new OAuth.OAuth(
   header
 );
 
-router.get("/", function(req, res, next) {
+router.get("/:city", function(req, res, next) {
+  console.log(req.params.city);
+
+  const city = req.params.city || "nis,serbia";
   request.get(
-    "https://weather-ydn-yql.media.yahoo.com/forecastrss?location=nis,rs&u=c&format=json",
+    `https://weather-ydn-yql.media.yahoo.com/forecastrss?location=${city}&u=c&format=json`,
     null,
     null,
     function(err, data, result) {

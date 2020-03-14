@@ -1,3 +1,23 @@
+.main-container {
+  text-align: center;
+  input {
+    width: 150px;
+    padding: 5px;
+    font-family: inherit;
+    font-size: 1.1em;
+    border: none;
+    border-bottom: 1px solid black;
+    outline: none;
+  }
+
+  .label {
+    text-align: left;
+    font-size: 0.9em;
+    color: #ccc;
+    position: relative;
+  }
+}
+
 .main-forecast {
   width: 50%;
   margin: 0 auto;
@@ -31,6 +51,7 @@
   .sun {
     grid-row: 2;
     align-self: center;
+    text-align: left;
   }
 
   .wind-pressure {
@@ -39,8 +60,14 @@
     display: flex;
     justify-content: center;
     h2 {
-      margin-right: 30px;
       margin-top: 0px;
+    }
+    .low-high {
+      display: flex;
+      margin: 0 30px;
+      h2 {
+        padding: 0 10px;
+      }
     }
   }
 
