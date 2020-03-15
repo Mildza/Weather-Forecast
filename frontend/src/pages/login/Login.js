@@ -73,6 +73,9 @@ const Login = () => {
         <div className="button">
           <Button disabled={!formValid}>Submit</Button>
         </div>
+        <div className="secret">
+          <p>username:admins password:123456</p>
+        </div>
       </form>
     </div>
   );
