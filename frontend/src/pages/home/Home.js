@@ -15,7 +15,7 @@ const Home = () => {
 
   const getForecast = () => {
     axios
-      .get(`yahoo/${city}`)
+      .get(`/yahoo/${city}`)
       .then((response) => {
         setWeather(response.data);
       })
