@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from "react";
+import React, { useState, useContext, useEffect } from "react";
 
 import axios from "axios";
 
@@ -6,36 +6,42 @@ import "./Home.scss";
 import MainForecast from "./../../components/forecast/mainForecast/MainForecast";
 import MultiForecast from "../../components/forecast/multiForecast/MultiForecast";
 
+import ErrorContext from "./../../shared/context/ErrorContext";
+
 const Home = () => {
   const [weather, setWeather] = useState();
   const [city, setCity] = useState("nis,serbia");
+  const { setError } = useContext(ErrorContext);
 
-  async function getForecast() {
-    await axios.get(`/yahoo/${city}`).then(response => {
-      setWeather(response.data);
-    });
-  }
+  const getForecast = () => {
+    axios
+      .get(`http://localhost:3001/yahoo/${city}`)
+      .then((response) => {
+        setWeather(response.data);
+      })
+      .catch((error) => setError(error.message));
+  };
 
   useEffect(() => {
     getForecast();
   }, [city]);
 
-  const getCity = city => {
+  const getCity = (city) => {
     setCity(city);
   };
 
   return (
-    <div className="default">
+    <div>
       {weather && (
-        <div>
+        <>
           <MainForecast
             data={weather}
-            submit={i => {
+            submit={(i) => {
               getCity(i);
             }}
           />
           <MultiForecast data={weather} />
-        </div>
+        </>
       )}
     </div>
   );

@@ -1,7 +1,9 @@
+@import "../../../shared/global";
+
 .main-container {
   text-align: center;
   form {
-    margin-top: 10px;
+    padding-top: 10px;
     input {
       width: 150px;
       padding: 5px;
@@ -10,6 +12,7 @@
       border: none;
       border-bottom: 1px solid black;
       outline: none;
+      height: 25px;
     }
 
     .label {

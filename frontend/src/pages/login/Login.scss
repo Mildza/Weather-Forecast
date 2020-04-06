@@ -1,8 +1,11 @@
 .login {
   width: 300px;
   margin: 0 auto;
-  margin-top: 70px;
-  position: relative;
+  height: 100vh;
+
+  form {
+    padding-top: 70px;
+  }
 
   input {
     width: 300px;

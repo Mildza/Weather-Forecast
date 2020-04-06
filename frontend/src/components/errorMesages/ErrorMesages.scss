@@ -1,24 +1,37 @@
 .error-message {
   position: absolute;
-  width: 30%;
   left: 50%;
-  top: 0;
+  top: 20px;
+  animation: fade_in_show 3s;
   .content {
     position: relative;
     left: -50%;
-    padding: 5px;
+    padding: 5px 15px;
     font-size: 1.5em;
     background-color: red;
-    border-radius: 0px 0px 10px 10px;
+    border-radius: 10px;
     color: #fff;
     text-align: center;
   }
 }
 
+@keyframes fade_in_show {
+  0% {
+    opacity: 0;
+  }
+  35% {
+    opacity: 1;
+  }
+  70% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+
 @media (max-width: 768px) {
   .error-message {
-    width: 80%;
-
     .content {
       font-size: 1.1em;
     }

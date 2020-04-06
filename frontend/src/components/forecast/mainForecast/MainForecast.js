@@ -9,11 +9,11 @@ const MainForecast = ({ submit, data }) => {
   const [search, setSearch] = useState("");
   const { low, high } = data.forecasts[0];
 
-  const inputhandler = e => {
+  const inputhandler = (e) => {
     setSearch(e.target.value);
   };
 
-  const submitHandler = e => {
+  const submitHandler = (e) => {
     e.preventDefault();
     submit(search);
   };
@@ -26,6 +26,7 @@ const MainForecast = ({ submit, data }) => {
           placeholder="city,country"
           value={search}
           onChange={inputhandler}
+          required
         />
         <Button type="submit">Search</Button>
       </form>
