@@ -18,11 +18,11 @@ const Login = () => {
   function submit(e) {
     e.preventDefault();
     axios
-      .post("http://localhost:3001/auth", {
+      .post("/auth", {
         username: values.username,
-        password: values.password
+        password: values.password,
       })
-      .then(response => {
+      .then((response) => {
         if (response.data.status === 200) {
           logHandler(true);
         } else if (response.data.status === 401) {
